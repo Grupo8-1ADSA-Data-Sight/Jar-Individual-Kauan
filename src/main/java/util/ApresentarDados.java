@@ -3,11 +3,9 @@ package util;
 import bancoDeDados.InserirDadosNaTabela;
 import com.github.britooo.looca.api.core.Looca;
 import com.sun.jna.platform.mac.IOReturnException;
-
 import java.io.IOException;
 
 public class ApresentarDados {
-    Looca looca = new Looca();
     Maquina maquina = new Maquina();
 
     public ApresentarDados() throws IOException {

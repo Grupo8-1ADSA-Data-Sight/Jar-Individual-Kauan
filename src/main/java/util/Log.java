@@ -9,9 +9,10 @@ import java.time.format.DateTimeFormatter;
 public class Log {
     private BufferedWriter writer;
     private String logFilePath;
+    String nomeLog = LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd-MM-yyyy"));
 
     public Log() {
-        this.logFilePath = "log.txt";
+        this.logFilePath = String.format("DataSight-" + nomeLog + ".txt");
     }
 
     // Método para criar/abrir o arquivo de log

@@ -2,15 +2,12 @@ package util;
 
 import bancoDeDados.ConexaoServer;
 import com.github.britooo.looca.api.core.Looca;
+import com.github.britooo.looca.api.group.discos.Volume;
 import com.github.britooo.looca.api.util.Conversor;
 import org.json.JSONObject;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
-import util.Maquina;
-import util.Slack;
-
 import java.io.IOException;
-import java.time.DayOfWeek;
 import java.util.List;
 
 public class Componentes extends Looca {
@@ -46,7 +43,7 @@ public class Componentes extends Looca {
 
         for (int i = 0; i < getGrupoDeDiscos().getVolumes().size(); i++) {
             informacoesArmazenamento = String.format("""
-                                Disco (%d)
+                            Disco (%d)
                             %s
                             Espaço disponivel do disco = %.1f GiB
                             Espaço total do disco = %.1f GiB
@@ -79,8 +76,16 @@ public class Componentes extends Looca {
         return totalArmazenamento / 1e+9;
     }
 
+    public Double disponivelHd(){
+        Double disponivelHd = 0.0;
+        for (Volume volume : getGrupoDeDiscos().getVolumes()) {
+            disponivelHd += volume.getDisponivel();
+        }
+        return disponivelHd / 1e+9;
+    }
+
     public Double emUsoHD(){
-        return (totalArmazenamento()  - totalArmazenamentoDisponivel()) / 1e+9;
+        return (totalArmazenamento()  - totalArmazenamentoDisponivel());
     }
 
 

@@ -1,6 +1,5 @@
 package util;
 
-import bancoDeDados.Conexao;
 import bancoDeDados.ConexaoServer;
 import com.github.britooo.looca.api.core.Looca;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
