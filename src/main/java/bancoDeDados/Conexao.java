@@ -11,7 +11,7 @@ public class Conexao {
         BasicDataSource dataSource = new BasicDataSource();
 
         dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
-        dataSource.setUrl("jdbc:mysql://127.0.0.1:3308/dataSight");
+        dataSource.setUrl("jdbc:mysql://bd:3306/dataSight");
         dataSource.setUsername("root");
         dataSource.setPassword("123456");
 
