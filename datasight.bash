@@ -33,6 +33,6 @@ fi
     sudo docker rm datasight-mysql
     sudo docker run -d -p 3308:3306 --name datasight-mysql nogmaycon/maycon-datasight-mysql:1.0
     
-    cd Java/target
+    cd /target
     sudo chmod 700 DataSight-1.0-SNAPSHOT-jar-with-dependencies.jar
     java -jar DataSight-1.0-SNAPSHOT-jar-with-dependencies.jar
