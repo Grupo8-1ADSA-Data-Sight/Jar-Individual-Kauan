@@ -37,3 +37,4 @@ DataSight 2024-06-12 18:38:57 - Inserindo dados de leitura da CPU
 DataSight 2024-06-12 18:38:58 - Inserindo dados de leitura do HD
 DataSight 2024-06-12 18:39:00 - Inserindo dados de leitura da RAM
 DataSight 2024-06-12 18:39:00 - Dados dinâmicos da CPU, Memória RAM, Disco e Rede enviados
+DataSight 2024-06-12 19:42:38 - Construtor InserirDadosNaTabela chamado

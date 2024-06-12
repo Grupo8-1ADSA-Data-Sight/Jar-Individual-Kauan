@@ -1,9 +1,11 @@
 package bancoDeDados;
 
 import org.apache.commons.dbcp2.BasicDataSource;
+import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 import java.io.IOException;
+import java.util.List;
 
 public class Conexao {
     private JdbcTemplate conexaoDoBanco;
@@ -15,11 +17,15 @@ public class Conexao {
         dataSource.setUsername("root");
         dataSource.setPassword("123456");
 
-
         conexaoDoBanco = new JdbcTemplate(dataSource);
     }
 
     public JdbcTemplate getConexaoDoBanco() throws IOException {
         return conexaoDoBanco;
     }
+
+    public void selectBanco(){
+        conexaoDoBanco.queryForObject("select 1", Integer.class);
+    }
+
 }
